@@ -1,9 +1,11 @@
 # RecyclerViewTest
-   RecyclerView实现ListView、GridView、瀑布流效果
+
+RecyclerView实现ListView、GridView、瀑布流效果
+
 RecyclerView是谷歌退出的最新的替换listView和GridView也可以实现瀑布流的效果，RecyclerView重点放在布局的复用，具体的布局交给LayoutManager来处理
-   若要使用该控件需要导入android.support.v7.widget.RecyclerView包
+
 ###RecyclerView.ViewHolder
- 之前优化ListView时一般也需要我们自己来写ViewHolder，在RecyclerView中谷歌提供了一个新的类RecyclerView.ViewHolder
+ 之前优化ListViwe时一般也需要我们自己来写ViewHolder，在RecyclerView中谷歌提供了一个新的类RecyclerView.ViewHolder
  
 ```java
      public static class RecyForListViewHolder extends RecyclerView.ViewHolder {
@@ -40,10 +42,9 @@ RecyclerView是谷歌退出的最新的替换listView和GridView也可以实现�
     public void onBindViewHolder(RecyForList holder, int position) {
         holder.itemView.setBackground(context.getResources().getDrawable(dd[position]));
     }
-   //item的个数
+
     @Override
     public int getItemCount() {
-       //这里同listView就没多大区别 view的多少
         return dd.length;
     }
 
@@ -56,22 +57,5 @@ RecyclerView是谷歌退出的最新的替换listView和GridView也可以实现�
 }
 ```
 ###类ListView效果
-  谷歌提供了三种常用布局管理器LinearLayoutManager实现的就如ListView效果
- ```java
-   LinearLayoutManager manager = new LinearLayoutManager(this);
-    RecyclerView mRecyclerView.setLayoutManager(manager);
- ```
 ###类GridView效果
-  谷歌提供了三种常用布局管理器LinearLayoutManager实现的就如ListView效果
- ```java
-    GridLayoutManager manager = new GridLayoutManager(this ,3); //第二个参数每行显示的item的个数
-    RecyclerView mRecyclerView.setLayoutManager(manager);
- ```
 ###瀑布流效果
-  谷歌提供了三种常用布局管理器LinearLayoutManager实现的就如ListView效果
- ```java
-    //第一个参数每行显示的item的个数，第二个参数瀑布流的风格
-    StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL); 
-    RecyclerView mRecyclerView.setLayoutManager(manager);
- ```
- 
