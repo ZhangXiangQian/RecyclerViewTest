@@ -4,6 +4,8 @@ RecyclerView实现ListView、GridView、瀑布流效果
 
 RecyclerView是谷歌退出的最新的替换listView和GridView也可以实现瀑布流的效果，RecyclerView重点放在布局的复用，具体的布局交给LayoutManager来处理
 
+若要使用该控件需要导入android.support.v7.widget.RecyclerView
+
 ###RecyclerView.ViewHolder
  之前优化ListViwe时一般也需要我们自己来写ViewHolder，在RecyclerView中谷歌提供了一个新的类RecyclerView.ViewHolder
  
@@ -57,5 +59,19 @@ RecyclerView是谷歌退出的最新的替换listView和GridView也可以实现�
 }
 ```
 ###类ListView效果
+ ```java
+      LinearLayoutManager manager = new LinearLayoutManager(this);
+      RecyclerView mRecyclerView.setLayoutManager(manager);
+ ```
 ###类GridView效果
+ ```java
+      //第二个参数每行显示的View的个数
+      GridLayoutManager grid = new GridLayoutManager(this,3);
+      RecyclerView mRecyclerView.setLayoutManager(grid);
+ ```
 ###瀑布流效果
+ ```java
+     //第二个参数瀑布流的风格（VERTICAL/HORIZONTAL这两个常用的 横向或纵向滚动） 第一个参数依据设定的风格列或行的数量
+     StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+     RecyclerView mRecyclerView.setLayoutManager(staggeredGridLayoutManager);
+ ```
