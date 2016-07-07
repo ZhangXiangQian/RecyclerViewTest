@@ -7,7 +7,7 @@ RecyclerView是谷歌推出的最新的替换listView和GridView同时也可以�
 若要使用该控件需要导入android.support.v7.widget.RecyclerView
 
 ###RecyclerView.ViewHolder
- 之前优化ListViwe时一般也需要我们自己来写ViewHolder，在RecyclerView中谷歌提供了一个新的类RecyclerView.ViewHolder
+ 之前优化ListView时一般也需要我们自己来写ViewHolder，在RecyclerView中谷歌提供了一个新的类RecyclerView.ViewHolder
  
 ```java
      public static class RecyForListViewHolder extends RecyclerView.ViewHolder {
