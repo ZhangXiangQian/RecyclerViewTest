@@ -1,5 +1,5 @@
 # RecyclerViewTest
-
+XRecyclerView 库 在原有的基础上加入查看更多、下拉刷新的功能
 RecyclerView实现ListView、GridView、瀑布流效果
 
 RecyclerView是谷歌推出的最新的替换listView和GridView同时也可以实现瀑布流的效果，RecyclerView重点放在布局的复用，具体的布局交给LayoutManager来处理
